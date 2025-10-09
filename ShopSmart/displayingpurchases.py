@@ -2,10 +2,10 @@ import mysql.connector
 import tkinter as tk
 from tkinter import ttk
 connection = mysql.connector.connect(
-            host='127.0.0.1',
+            host='#######',
             database='shopsmart',
             user='root',
-            password='Varshith@11347'
+            password='########'
         )
 
 if connection.is_connected():
@@ -33,3 +33,4 @@ def display_purchases_category(selected_category):
 
 
     
+
