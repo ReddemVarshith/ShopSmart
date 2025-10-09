@@ -3,10 +3,10 @@ import mysql.connector
 from datetime import datetime
 def submitPurchase(item,price,quantity,date,category_name):
     connection = mysql.connector.connect(
-            host='127.0.0.1',
+            host='########',
             database='shopsmart',
             user='root',
-            password='Varshith@11347'
+            password='########'
         )
 
     if connection.is_connected():
@@ -25,4 +25,5 @@ def submitPurchase(item,price,quantity,date,category_name):
     category_id = category[0]
     cursor.execute("INSERT INTO PURCHASES (item_name ,price ,quantity , purchase_date,category_id) VALUES (%s , %s , %s , %s , %s)",(item,price,quantity,date,category_id))
     connection.commit()
+
     messagebox.showinfo("Succesfull", "Purchase Added Succesfully")
