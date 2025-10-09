@@ -2,10 +2,10 @@ import mysql.connector
 from tkinter import messagebox
 from datetime import datetime
 connection = mysql.connector.connect(
-            host='127.0.0.1',
+            host='#######',
             database='shopsmart',
             user='root',
-            password='Varshith@11347'
+            password='########'
         )
     
 if connection.is_connected():
@@ -33,5 +33,6 @@ def delete_purchase_item(item):
     cursor.execute("Delete FROM purchases WHERE item_name=%s",(item,))
     connection.commit()
     messagebox.showinfo("Succesfull","Purchase Deleted Succesfully")
+
 
 
